@@ -1,0 +1,201 @@
+<!-- Day06_basic_html.html -->
+<!-- 
+Nội dung thi chuyên đề 3: Tạo giao diện web theo chủ đề tự chọn, bao gồm ít nhất 3 trang: trang chủ, trang chi tiết và trang liên hệ, có responsive trên mobile.
+- Chuyên đề 3: Thiết kế giao diện Web, sử dụng 3 ngôn ngữ sau: HTML, CSS, JavaScript.
+- HTML (HyperText Mark Language)
++ Là ngôn ngữ dùng để tạo ra khung của trang Web.
++ Học HTML: Học các thẻ(tag) và cách các thẻ hiển thị.
++ HTML được lưu dưới dạng file có đuôi .html hoặc .htm
++ HTML có nhiều version, phổ biến nhất đó là HTML4 và 5.
++ Kết hợp với CSS dể tạo giao diện và JavaScript để tạo tính tương tác.
+ -->
+
+ <!-- 1 - - Cấu trúc trang HTML cơ bản - -->
+ <!DOCTYPE html>
+ <!-- Thẻ html gọi là thẻ đầy đủ: thẻ mở và thẻ đóng tách biệt -->
+ <html>
+ 	<head>
+ 		<!-- Tiêu đề của trang -->
+ 		<title>Thanh's first Website</title>
+ 		<!-- Thẻ meta là dạng thẻ khuyết, mở và đóng thẻ tại thẻ mở luôn -->
+ 		<meta charset = "utf8" />
+ 	</head>
+ 	<body>
+ 		<!-- body là nơi tập trung nội dung của trang web -->
+ 		<!-- Hello World -->
+ 		<!-- thẻ h1 h2 h3 h4 h5 h6 - hiển thị tiêu đề cần nhấn mạnh - heading - thẻ đầy đủ -->
+ 		<!-- SEO -->
+ 		<h1>Thẻ h1</h1>
+ 		<h2>Thẻ h2</h2>
+ 		<h3>Thẻ h3</h3>
+ 		<h4>Thẻ h4</h4>
+ 		<h5>Thẻ h5</h5>
+ 		<h6>Thẻ h6</h6>
+ 		<!-- p - hiển thị 1 đoạn văn - paragraph, thẻ đầy đủ -->
+ 		<p> Đoạn văn 1</p>
+ 		<p> Đoạn văn 2</p>
+ 		<!-- br - dùng để xuống dòng trong file html - break - thẻ khuyết -->
+ 		Hê lô Trung Thành <br />
+ 		12345678
+ 		<!-- hr - Hiển thị 1 đường kẻ ngang - horizontal - thẻ khuyết -->
+ 		<hr />
+ 		<!-- I - in nghiêng - italic -->
+ 		<!-- B - in đậm - bold -->
+ 		<!-- U - gạch chân - underline -->
+ 		<!-- 3 thẻ trên đều là thẻ đầy đủ -->
+ 		<I>Đây là thẻ italic</I>
+ 		<br />
+ 		<B>Đây là thẻ Bold</B>
+ 		<br />
+ 		<U>Đây là thẻ Underline</U>
+
+ 		<!-- div - tạo ra các khối bao lấy các thẻ khác - division - thẻ đầy đủ - chỉ có tác dụng khi học thêm css và js --> 
+ 		Text demo
+ 		<div>Thẻ div</div>
+ 		<!-- span - dùng để css cho 1 thành phần text ngang hàng - Thẻ đầy đủ - chỉ có tác dụng khi học thêm css và js -->
+ 		Hello <span>Trung Thanh</span> 123
+ 		<br />
+ 		<!-- img - hiển thị ảnh - image - thẻ khuyết -->
+ 		<!-- Lập trình có 2 loại đường dẫn:
+ 		+ Tuyệt đối/vật lý
+ 		VD: C://php0922e2/abc.png
+ 		+ Tương đối (Nên sử dụng khi nhúng file để đảm bảo file luôn tồn tại trên mọi hệ thống)
+ 		VD: images/abc.png (không có dấu / ở đầu đường dẫn) -->
+ 		<!-- Khi add ảnh nên để cùng cấp - tức là ảnh và file html phải cùng 1 folder -->
+ 		<img 
+        src="https://mir-s3-cdn-cf.behance.net/projects/404/aec9f4101756393.Y3JvcCwxNTczLDEyMzAsMCwyODA.png"
+        alt="Text hiển thị khi đường dẫn ảnh bị sai"
+        title="Text hiển thị khi rê chuột(hover) qua ảnh"
+        width="500"
+        height="500" 
+ 		/>
+
+ 		<!-- table, tr, th, td - liên quan đến bảng - thẻ đầy đủ -->
+ 		<!-- tr - table row - hàng
+ 		     th - table heading - tiêu đề cột
+ 		     td - table data - nội dung của cột -->
+ 		<table border ="1" cellspacing="0" cellpadding="6">
+ 			<tr>
+ 				<th>Tên</th>
+ 				<th>Tuổi</th>
+ 			</tr>
+ 			<tr>
+ 				<td>Trung Thành</td>
+ 				<td>18</td>
+ 			</tr>
+ 		</table>
+
+ 		<table border="1" cellspacing="0" cellpadding="6">
+ 			<tr>
+ 				<!-- dùng colspan để gộp cột, và lưu ý sau khi gộp phải trừ đi cột khác để ko bị vỡ cấu trúc bảng -->
+ 				<td colspan="3">A</td>
+ 				<!-- <td>B</td> -->
+ 				<!-- <td>C</td> -->
+ 			</tr>
+ 			<tr>
+ 				<!-- dùng rowspan để gộp hàng, và ;lưu ý quy tắc bù trừ khi gộp hàng để ko bị vỡ cấu trúc bảng -->
+ 				<td>D</td>
+ 				<td rowspan="2">E</td>
+ 				<td>F</td>
+ 			</tr>
+ 			<tr>
+ 				<td>G</td>
+ 				<!-- <td>H</td> -->
+ 				<td>J</td>
+ 			</tr>
+ 		</table>
+ 		<!-- Danh sách: ul ol li - thẻ đầy đủ
+ 		     ul - unorder list (hiển thị theo dạng list với các dấu chấm tròn)
+ 		     ol - order list (hiển thị theo dạng list 1,2,3)
+ 		     li - list item  -->
+ 		    <ul>
+ 		    	<li>Li 1</li>
+ 		    	<li>Li 2</li>
+ 		    	<li>Li 3</li>
+ 		    </ul>
+ 		    <ol>
+ 		    	<li>Li 1</li>
+ 		    	<li>Li 2</li>
+ 		    	<li>Li 3</li>
+ 		    </ol>
+ 		    <!-- a - hiển thị link - anchor - thẻ đầy đủ -->
+ 		    <!-- href để cho link và target dùng để mở link trên 1 tab mới -->
+ 		    <a href="https://www.facebook.com/thanhs.lider.5/" target="_blank">Click vào đây để tới Facebook của Trung Thành</a>
+ 		    <br />
+ 		    <a href="abc.html">Trang abc</a>
+ 		    <br />
+ 		    <!-- form, input, textarea, select, option - liên quan đến form -->
+ 		    <form action='' method="post">
+ 		    	Nhập tên:
+ 		    	<input type="text" placeholder="Hãy nhập tên" value="Trung Thành" />
+ 		    	<br />
+ 		    	Nhập tuổi:
+ 		    	<input type="number" placeholder="Hãy nhập tuổi" value="19" />
+ 		    	<br />
+ 		    	Nhập email:
+ 		    	<input type="email" placeholder="Hãy nhập email của bạn" />
+ 		    	<br />
+ 		    	Nhập mật khẩu:
+ 		    	<input type="password" placeholder="Hãy nhập mật khẩu của bạn">
+ 		    	<br />
+ 		    	Giới tính:
+ 		    	<!-- Với radio bắt buộc phải khai báo thuộc tính name trùng nhau -->
+ 		    	<input type="radio" name="gender"> Nam
+ 		    	<input type="radio" name="gender"> Nữ
+ 		    	<input type="radio" name="gender"> Khác
+ 		    	<br />
+ 		    	Nghề nghiệp:
+ 		    	<!-- Nếu muốn box được tích sẵn thì hãy thêm thuộc tính checked -->
+ 		    	<input type="checkbox" checked> Developer
+ 		    	<input type="checkbox" > Tester
+ 		    	<!-- <input type="checkbox" id='tes'> <label for="tes">Tester</label> -->
+ 		    	<!-- Khi khai báo như trên thì không cần phải tick vào box mà chỉ cần bấm vào chữ cũng có thể tick vào ô box được -->
+ 		    	<input type="checkbox"> BA
+ 		    	<br />
+ 		    	Quốc gia:
+ 		    	<!-- Nếu chọn nhiều thì thêm multiple vào sau select -->
+ 		    	<!-- VD: <select multiple> -->
+ 		    	<select>
+ 		    		<option>Việt Nam</option>
+ 		    		<option>Korea</option>
+ 		    		<option>Japan</option>
+ 		    		<option>USA</option>
+ 		    	</select>
+ 		    	<br/>
+ 		    	Avatar:
+ 		    	<!-- Nếu chọn nhiều thì thêm multiple vào sau select (để có thể chọn nhiều thì hãy giữ Ctrl) -->
+ 		    	<!-- VD: <select multiple> -->
+
+ 		    	<input type="file" >
+ 		    	<br/>
+ 		    	Ghi chú:
+ 		    	<!-- cols và rows dùng để set kích thước cho ô ghi chú -->
+ 		    	<textarea cols='20' rows="10" placeholder="Ghi chú của bạn"></textarea>
+ 		    	<br/>
+ 		    	<!-- Nút submit - gửi thông tin của form đi -->
+ 		    	<input type="submit" value="Gửi thông tin">
+ 		    	<!-- Nút reset -->
+ 		    	<input type="reset" value="Thiết lập lại">
+ 		    </form>
+ 		    <!-- Button - hiển thị nút - thẻ đầy đủ -->
+ 		    <button>Button</button>
+ 		    <!-- Center - căn giữa nội dung bên trong - thẻ đầy đủ -->
+ 		    <center>Nội dung được căn giữa</center>
+ 		    <!-- fieldset - legend - thẻ đầy đủ -->
+ 		    <form>
+ 		    	<fieldset>
+ 		    		<legend>Nhập tên của bạn</legend>
+ 		    		<input type="text" >
+ 		    	</fieldset>
+ 		    </form>
+ 		    <!-- iframe - nhúng trang web khác -->
+ 		    <iframe src="https://www.facebook.com/thanhs.lider.5/" height="400" width="400"></iframe>
+ 		    <!-- Các thẻ có ngữ nghĩa về cấu trúc: header, main, footer, nav, section, aside, article,... -->
+ 		    <div id="header">HEADER</div>
+ 		    <header>HEADER</header>
+ 		    <!-- 2 dòng trên giống nhau -->
+
+
+
+ 	</body>
+ </html> 
