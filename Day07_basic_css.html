@@ -1,0 +1,144 @@
+<!-- Day07_basic_css.html
+1/CSS là gì ?
++ HTML CSS JS
++ CSS - Cascading StyleSheet: là một ngôn ngữ, dùng để thiết kế trang web bằng việc định dạng cho HTML.
++ Học CSS: học các thuộc tính cơ bản và giá trị cơ bản tương ứng.
+VD: Color: red
++ CSS cơ bản: các thuộc tính cơ bản
++ CSS nâng cao: dựng layout
++ Responsive: là một trang web có thể tương thích, hiển thị đầy đủ thông tin cho dù dùng trên PC, điện thoại, máy tính bảng,... (Đây được gọi là 1 trang web chuẩn Responsive). Và CSS có hỗ trợ Responsive.
++ Framework - Thư viện Bootstrap: Dựa trên CSS
++ Cắt giao diện từ file Photoshop
+
+ -->
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>CSS cơ bản phần 1</title>
+ 	<!-- VD Cách 2 - Inline trong file .html -->
+ 	<!-- <style type="text/css">
+ 		h2 {
+ 			color:  blue;
+ 			background: yellow;
+ 		}
+ 	</style> -->
+ 	<!-- VD Cách 3 - Bằng cách dùng link để nhúng file -->
+ 	<!-- <link rel="stylesheet" href="demo.css" /> -->
+
+ </head>
+ <body>
+ 	<!-- 1 - Cú pháp khai báo CSS:
+ 	selector { property: value; }
+ 	- selector là đối tượng sẽ bị CSS
+ 	 -->
+ 	 <h1 style="color: red">Thẻ h1</h1>
+ 	 <!-- 2 - Khai báo CSS -->
+ 	 <!-- Cách 1: Inline trong thẻ, sử dụng thuộc tính style -->
+ 	 <!-- Cách 2: Inline trong file .html thông qua thẻ style, và đặt trong thẻ head -->
+ 	 <h2>Thẻ h2</h2>
+ 	 <!-- Cách 3: Dùng External từ file .css bên ngoài, tạo file demo.css cùng cấp .html hiện tại -->
+ 	 <h3>Thẻ h3</h3>
+ 	 <!-- Note: -->
+
+ 	 <!-- Cách 1: ít khi sử dụng vì code phức tạp, dài dòng và không có tính sử dụng lại -->
+ 	 <!-- Cách 2: Không sử dụng lại được khi có nhiều trang -->
+ 	 <!-- Cách 3: Là cách thực tế khi thiết kế web -->
+ 	 <style type="text/css">
+ 	 	h2 {
+ 	 		color: yellow;
+ 	 		background: darkblue;
+ 	 	}
+ 	 </style>
+ 	 <link rel="stylesheet" type="text/css" href="demo.css">
+
+ 	 <!-- 3 - Một số selector cơ bản trong CSS -->
+ 	 <!-- + Selector theo tên thẻ -->
+ 	 <style type="text/css">
+ 	 	h4 {
+ 	 		color: darkred;
+ 	 	}
+ 	 </style>
+ 	 <h4>Thẻ h4</h4>
+ 	 <h4>Thẻ h4 thứ 2</h4>
+
+ 	 <!-- + Selector theo thuộc tính id và class -->
+ 	 <style type="text/css">
+ 	 	/*Dùng id khi nào?*/
+ 	 	/*id nên dùng cho duy nhất 1 phần tử nhất định*/
+ 	 	#p-id {
+ 	 		color: red;
+ 	 	}
+ 	 	/*Dùng class khi nào?*/
+ 	 	/*class nên dùng cho nhiều phần tử cần khai báo giống nhau*/
+ 	 	.p-class {
+ 	 		color: yellow;
+ 	 	}
+ 	 </style>
+ 	 <p id="p-id">Thẻ p id</p>
+ 	 <p class="p-class">Thẻ p class</p>
+ 	 <span class="p-class">Thẻ span class</span>
+ 	 <!-- <span class="p-class p-class1 p-class2">Thẻ span class</span> -->
+
+ 	 <!-- + Selector theo cấp -->
+ 	 <style type="text/css">
+ 	 	#personal a {
+ 	 		color: greenyellow;
+ 	 	}
+ 	 </style>
+ 	 <a href="#">Thẻ a bên ngoài</a>
+ 	 <div id="personal">
+ 	 	<a href="#">Thẻ a bên trong</a>
+ 	 </div>
+
+ 	 <!-- + Selector theo thuộc tính thẻ -->
+ 	 <style type="text/css">
+ 	 	input[type=text] {
+ 	 		background: red;
+ 	 	}
+ 	 </style>
+ 	 <form>
+ 	 	Nhập tên: <input type="text" />
+ 	 	Nhập tuổi: <input type="number" />
+ 	 	Nhập email: <input type="email" />
+ 	 </form>
+
+ 	 <!-- + Selector theo trạng thái -->
+ 	 <!-- Hover: Hiệu ứng khi di chuột qua-->
+ 	 <style type="text/css">
+ 	 	#p-hover:hover {
+ 	 		background: blue;
+ 	 	}
+ 	 </style>
+ 	 <p id="p-hover">Hover để đổi màu nền</p>
+
+ 	 <!-- Vị trí trong cấu trúc cha con trực tiếp -->
+ 	 <style type="text/css">
+ 	 	ul li:first-child{background: red;}
+ 	 	ul li:last-child{background: green;}
+ 	 	ul li:nth-child(2) {background: yellow;}
+ 	 	ul li:nth-child(3) {background: blue;}
+
+ 	 	/*CSS theo after before*/
+ 	 	#a-pos:before {
+ 	 		content: 'Nội dung trước thẻ a';
+ 	 	}
+ 	 	#a-pos:after {
+ 	 		content: 'Nội dung sau thẻ a';
+ 	 	}
+
+ 	 </style>
+
+ 	 <a href="#" id="a-pos">Thẻ a ban đầu</a>
+ 	 <ul>
+ 	 	<li>Thẻ li đầu tiên</li>
+ 	 	<li>Thẻ li thứ 2</li>
+ 	 	<li>Thẻ li thứ 3</li>
+ 	 	<li>Thẻ li cuối cùng</li>
+ 	 </ul>
+
+ 
+ </body>
+ </html>

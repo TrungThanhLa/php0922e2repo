@@ -1,0 +1,79 @@
+<!-- css_basic_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Các thuộc tính cơ bản của CSS</title>
+</head>
+<body>
+	<style type="text/css">
+		/*1 - Background:  màu nền*/
+		#h1-bg {
+			/*Màu trong CSS: 
+			+ Đơn sắc:  red, white,...;
+			+ Hecxa:  màu trộn, ví dụ:  #abcdef, #fff = #fffff;
+			+ RGB:  red green blue;
+			*/
+/*			background-color: #a254c3;*/
+
+			/*Nền là ảnh*/
+			/*Chuẩn bị ảnh cùng cấp file hiện tại*/
+			/*height: 800px;
+            background-color: #a254c3;
+            background-image: url(1120265.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;*/
+
+            /*Thuộc tính gộp*/
+            /*Dùng để viết ngắn gọn hơn so với cách viết trên*/
+
+            background: #a254c3 url(1120265.jpg) no-repeat center;
+}
+            /*2 - Font:  */
+            #h2-font{
+            	font-size: 33px;
+                font-weight: bold;
+                font-style: italic;
+                /*Tên font family được lấy từ đường dẫn: 
+                C:Windows/Fonts;
+                */
+                font-family: Arial;
+            }
+            /*3 - Text*/
+            #h3-text{
+            	color: red;
+                text-align: center;
+                text-decoration: underline;
+                text-transform: uppercase;
+                text-shadow: 3px 3px 3px #050506;
+                line-height: 30px;
+            }
+
+            /*4 - Border*/
+            #div-border {
+            	/*border-width: 3px;
+                border-style: solid;
+                border-color: red;*/
+                /*Gộp:  ;*/
+                border:  3px solid red ;
+                border-radius: 10px;
+            }
+
+
+        </style>
+        <div id="div-border">Div Border</div>
+        <h3 id="h3-text">H3 Text</h3>
+        <h2 id="h2-font">H2 Font</h2>
+
+        <h1 id="h1-bg">H1 BG</h1>
+
+
+
+
+
+	<h1 id="h1-bg">H1 Background</h1>
+
+</body>
+</html>
