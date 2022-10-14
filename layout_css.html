@@ -1,0 +1,111 @@
+<!-- layout_css.html
+1 - Layout là gì ?
++ Layout là bố cục của 1 trang web, là cấu trúc hàng và cột
++ Thẻ Table
+
+2 - Các kỹ thuật dựng layout:
++ Table: Cấu trúc phức tạp và rất khó để responsive -> Không nên dùng
++ CSS Position: Phức tạp và cũng khó để responsive -> Không nên dùng
++ Float: Có thể dùng, nhưng không nên ưu tiên vì có khả năng làm vỡ cấu trúc layout (hàng, cột)
++ Flex: Ưu tiên sử dụng vì tính đơn giản, và không bị vỡ layout.
++ Grid: Tự tìm hiểu (Linh hoạt hơn flex nhưng mà khó và phức tạp hơn)
+
+3 - Kiểu hiển thị inline và block
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Demo Layout</title>
+</head>
+<body>
+	<style type="text/css">
+		/*3 - Inline và Block*/
+		/* Thẻ Block: p, h, div, ul, ol,... */
+		/* Thẻ Inline: b, i, u, a, span,... */
+		/* Nên dùng display: inline-block; thay cho inline để có tính chất margin cả 4 hướng */
+        li {
+        	background: red;
+        	display: inline-block;
+        }
+
+        /*4 - Dựng layout với float:  float cho các item trước, sau đó mới set width*/
+        /*- Chú ý tránh vỡ giao diện: luôn phải đảm bảo tổng width trên 1 hàng không được vượt quá 100%, và phải clear: both ở phần tử ngay sau float cuối cùn.*/
+
+        .item1 {
+        	background: red;
+        	float: left;
+            width: 33.3%;
+        }
+        .item2 {
+        	background: blueviolet;
+        	float: left;
+            width: 33.3%;
+        }
+        .item3 {
+        	background: green;
+        	float: left;
+            width: 33.3%;
+        }
+        /*1 Hàng 3 cột bằng nhau*/
+        /*Tổng 1 hàng = 100%, dùng width trong layout nên dùng đơn vị % thay vì px*/
+
+        /*5 - Dựng layout với flex:  chỉ áp dụng cho cấu trúc HTML dạng cha con*/
+
+        .row {
+        	display: flex;
+        }
+
+        .col1 {
+        	background: darkblue;
+        }
+
+        .col2 {
+        	background: red;
+        }
+
+        .col3 {
+        	background: green;
+        }
+
+        .col4 {
+        	background: pink;
+        }
+        .col {
+        	width: 25%;
+        }
+
+        /* Flex tính chất mặc định là luôn giữ các cột trên 1 hàng, không quan trọng về tổng width, không ảnh hưởng đến các phần tử phía sau -> tránh được tình trạng bị vỡ giao diện */
+
+	</style>
+    <div class="row">
+    	<div class="col1 col">Col 1</div>
+    	<div class="col2 col">Col 2</div>
+    	<div class="col3 col">Col 3</div>
+    	<div class="col4 col">Col 4</div>
+    </div> 
+
+	<div class="item1 item">Iteam 1</div>
+	<div class="item2 item">Iteam 2</div>
+	<div class="item3 item">Iteam 3</div>
+
+
+
+	<ul>
+		<li><a href="#">Link 1</a></li>
+		<li><a href="#">Link 2</a></li>
+		<li><a href="#">Link 3</a></li>
+		<li><a href="#">Link 4</a></li>
+	</ul>
+
+	<div>Thẻ div</div> abcdef
+	<br />
+	<span>Thẻ span</span> 123456
+
+	<!-- Block là kiểu hiển thị của thẻ div -->
+	<!-- Inline là kiểu hiển thị của thẻ span -->
+
+</body>
+</html>

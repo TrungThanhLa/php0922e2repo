@@ -1,0 +1,121 @@
+<!-- css_basic_2.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS cơ bản phần 2</title>
+</head>
+<body>
+	<style type="text/css">
+		/*1 - Margin: Khoảng cách giữa các phần tử HTML liền kề*/
+		#div-mg-1 {
+			background: red;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-top: 30px;
+            margin-right: 20px;
+
+		}
+		#div-mg-2 {
+			background: blue;
+		}
+
+		/*2 - Padding: Khoảng cách tính từ viền bao quanh */
+
+		#div-pd {
+			background: green;
+			padding-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+
+            /*Gộp: */
+            /*4 giá trị sẽ theo 1 vòng kim đồng hồ, lần lượt như sau: top right bottom left*/
+            padding: 20px 10px 20px 10px;
+            /*2 giá trị:  top-bottom left-right*/
+            padding: 3px 4px;
+            /*1 giá trị:  top-bottom-left-right*/
+            padding: 5px;
+		}
+		/*3 - Width, Height*/
+		#WH {
+			background: yellowgreen;
+			width: 200px;
+            height: 60px;
+		}
+
+		/*4- Position: Cơ chế di chuyển phần tử HTML không làm ảnh hưởng đến các HTML xung quanh*/
+		/* + fixed:  Vị trí cố định, dựa vào 4 cạnh body để căn theo*/
+		#pos-fixed {
+			background: seagreen;
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            bottom: 20px;
+            left: 800px;
+		}
+		/*Để di chuyển, chúng ta phải dùng top-left-right-bottom*/
+
+		/* + relative: vị trí tương đối, lấy chính vị trí hiện tại của nó để căn chứ không dựa vào 4 mép cạnh của trình duyệt như fixed */
+		#pos-rel {
+			background: rosybrown;
+			width: 60px;
+			height: 60px;
+			position: relative;
+            right: 8px;
+            top: 10px;
+		}
+
+		/* + absolute: vị trí tuyệt đối, dùng theo cấu trúc cha con, con sẽ là absolute và cha là relative. Việc này nhằm mục đích cho phần tử HTML chỉ có thể di chuyển và căn vị trí bên trong phần tử HTML cha và không bị vượt ra ngoài. */
+
+		#parent{
+			background: hotpink;
+			width: 200px;
+			height: 200px;
+			position: relative;
+
+		}
+
+		#pos-abs {
+			background: orangered;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+            right: 100px;
+            z-index: 2; 
+
+		}
+
+		/*5 - Overflow:  Các hiển thị khi nội dung bị tràn*/
+		#div-ov {
+			background: skyblue;
+			width: 50px;
+            overflow: hidden;
+            opacity: 1;
+		}
+
+		/*6 - Opacity:  Độ mờ được chạy từ 0 - 1*/
+
+
+
+
+	</style>
+	<div id="div-ov">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+
+	<!-- <div id="parent">
+		<div id="pos-abs">Pos Absolute</div>
+	</div> -->
+
+	<div id="pos-rel">Div Relative</div>
+	<div id="pos-fixed">Div Fixed</div>
+
+	<div id="WH">div width height 123 123 132 123 13 23 123 123 123</div>
+
+	<div id="div-pd">Div padding</div>
+
+	<div id="div-mg-1">Div mg 1</div>
+	<div id="div-mg-2">Div mg 2</div>
+
+</body>
+</html>
