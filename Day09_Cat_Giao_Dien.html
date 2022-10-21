@@ -1,0 +1,124 @@
+<!-- index.html.html
+ Cắt giao diện:
+- Chuyển đổi giao diện từ 1 file thiết kế (PS, AI,...) về HTML CSS JS
+- Chuyển đổi chỉ cần tương đối về mặt khoảng cách, còn lại là phải chính xác tuyệt đối về text, ảnh, màu sắc và font chữ
+- Tập trung vào kỹ năng dựng layout là chính
++ Các bước cắt giao diện:
+B1: Tạo cấu trúc thư mục:
+psd_demo /
+         /fonts: lưu các font lấy từ file thiết kế
+         /images: lưu các ảnh cắt từ file thiết kế
+         /css: chứa các file .css
+            /style.css:
+         /js: chứa các file .js
+            /script.js
+         index.html: file code HTML
+
+B2: Cắt ảnh từ Photoshop
+Phím tắt:
++ Alt Chuột giữa hoặc Ctrl + -> Zoom ảnh
++ Giữ Space + chuột trái -> Di chuyển (Move)
++ Dùng M để chọn vật cần cắt -> Dùng C để Crop ảnh -> Enter 2 lần để cắt ảnh
++ Ảnh là thứ không thể dùng HTML CSS để tạo ra được
+
+B3: Lấy font chữ từ Photoshop
++ Dùng T để kiểm tra font, với các font mà win chưa có thì cần download trên google về
+- Nhúng font vào hệ thống bằng cách sử dụng CSS
+
+B4: Coding.....
+Code HTML -> CSS -> JS
+Code HTML cần phải đặt class và dựng sẵn cấu trúc layout nếu có
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Cắt giao diện bt1</title>
+   <!-- Nhúng file css, js -->
+   <link rel="stylesheet" type="text/css" href="css/style.css"/>
+   <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+   <div class="container-fluid">
+      <!-- HEADER -->
+      <header class="header">
+         <div class="h-container container">
+            <div class="row">
+               <div class="Logo">Bloom</div>
+               <div class="Menu">
+                  <ul>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">About Us</a></li>
+                     <li><a href="#">Services</a></li>
+                     <li><a href="#">Portfolio</a></li>
+                     <li><a href="#">Contact Us</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- /HEADER -->
+
+      <!-- MAIN -->
+      <main class="main">
+         <div class="main-top">
+            <div class="container">
+               <div class="row">
+                  <div class="article">
+                     <h2 class="h-article">Lorem ipsum dolor sit amet</h2>
+                     <div class="des">
+                        <p>Vestibulum pulvinar tincidunt placerat. Nulla porta porttitor sem, a ultrices magna feugiat quis. Nam ac diam ac libero posuere lacinia eget et libero. </p>
+                        <p>Cras pretium odio eget felis consequat, ut adipiscing enim suscipit. Suspendisse hendrerit sapien blandit nisi sagittis dictum.</p>
+                     </div>
+                     <a href="#" class="Learn">Learn More</a>
+                  </div>
+                  <div class="main-image">
+                     <img src="images/main.jpg" class="main-img">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="main-middle">
+            <div class="container">
+               <h2 class="h-middle">This is a Heading</h2>
+               <div class="row">
+                  <div class="middle-item">
+                     <div class="rectangle"></div>
+                     <h3 class="h3-middle">Aliquam et iaculis sapien</h3>
+                     <p class="des-middle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi nisl, bibendum et feugiat eu, vehicula ac nulla. </p>
+                     <a href="#" class="Learn">Learn More</a>
+                  </div>
+                  <div class="middle-item">
+                     <div class="rectangle"></div>
+                     <h3 class="h3-middle">Aliquam et iaculis sapien</h3>
+                     <p class="des-middle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi nisl, bibendum et feugiat eu, vehicula ac nulla. </p>
+                     <a href="#" class="Learn">Learn More</a>
+                  </div>
+                  <div class="middle-item">
+                     <div class="rectangle"></div>
+                     <h3 class="h3-middle">Aliquam et iaculis sapien</h3>
+                     <p class="des-middle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisi nisl, bibendum et feugiat eu, vehicula ac nulla. </p>
+                     <a href="#" class="Learn">Learn More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="main-bottom">
+            <div class="container"></div>
+         </div>
+      </main>
+      <!-- /MAIN -->
+
+      <!-- FOOTER -->
+      <footer class="footer">
+         <div class="f-container container"></div>
+      </footer>
+      <!-- /FOOTER -->
+   </div>
+
+
+</body>
+</html>

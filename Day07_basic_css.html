@@ -58,7 +58,7 @@ VD: Color: red
  	 <!-- + Selector theo tên thẻ -->
  	 <style type="text/css">
  	 	h4 {
- 	 		color: darkred;
+ 	 		color: red;
  	 	}
  	 </style>
  	 <h4>Thẻ h4</h4>
@@ -76,9 +76,20 @@ VD: Color: red
  	 	.p-class {
  	 		color: yellow;
  	 	}
+
+        #p-idh4 {
+            color: blueviolet;
+        }
+
+        .p-classh4 {
+            color: darkgoldenrod;
+        }
  	 </style>
  	 <p id="p-id">Thẻ p id</p>
  	 <p class="p-class">Thẻ p class</p>
+     <h4 id="p-idh4">Thẻ h4</h4>
+     <h4 class="p-classh4">Thẻ h4 thứ 2</h4>
+
  	 <span class="p-class">Thẻ span class</span>
  	 <!-- <span class="p-class p-class1 p-class2">Thẻ span class</span> -->
 
@@ -96,11 +107,14 @@ VD: Color: red
  	 <!-- + Selector theo thuộc tính thẻ -->
  	 <style type="text/css">
  	 	input[type=text] {
- 	 		background: red;
+            background: red;
  	 	}
+        input[type=number]{
+            background: blue;
+        }
  	 </style>
  	 <form>
- 	 	Nhập tên: <input type="text" />
+ 	 	Nhập tên: <input type="text" placeholder="Hãy nhập tên" />
  	 	Nhập tuổi: <input type="number" />
  	 	Nhập email: <input type="email" />
  	 </form>
@@ -109,7 +123,7 @@ VD: Color: red
  	 <!-- Hover: Hiệu ứng khi di chuột qua-->
  	 <style type="text/css">
  	 	#p-hover:hover {
- 	 		background: blue;
+ 	 		background: white;
  	 	}
  	 </style>
  	 <p id="p-hover">Hover để đổi màu nền</p>
@@ -121,15 +135,19 @@ VD: Color: red
  	 	ul li:nth-child(2) {background: yellow;}
  	 	ul li:nth-child(3) {background: blue;}
 
- 	 	/*CSS theo after before*/
- 	 	#a-pos:before {
- 	 		content: 'Nội dung trước thẻ a';
- 	 	}
- 	 	#a-pos:after {
- 	 		content: 'Nội dung sau thẻ a';
- 	 	}
-
  	 </style>
+
+
+        <!-- /*CSS theo after before*/ -->
+        <style type="text/css">
+        #a-pos:before {
+            content: 'Nội dung trước thẻ a';
+        }
+        #a-pos:after {
+            content: 'Nội dung sau thẻ a';
+        }
+        </style>
+
 
  	 <a href="#" id="a-pos">Thẻ a ban đầu</a>
  	 <ul>
@@ -139,6 +157,5 @@ VD: Color: red
  	 	<li>Thẻ li cuối cùng</li>
  	 </ul>
 
- 
  </body>
  </html>

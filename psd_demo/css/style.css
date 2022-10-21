@@ -1,0 +1,172 @@
+/*psd_demo/css/style.css*/
+@media(max-width: 767px) {}
+/*Nhúng font:  */
+@font-face {
+	src: url(../fonts/Pacifico-Regular.ttf);
+	font-family: Pacifico-Regular;
+}
+
+header.header {
+    background: #2F2F2F;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 70%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.Logo {
+    color: white;
+    font-size: 50px;
+    font-family: Pacifico-Regular;
+    width: 50%;
+}
+
+.Menu {
+    width: 50%;
+    /*Căn cột hiện tại theo chiều dọc so với các cột khác*/
+    align-self: center;
+}
+
+.Menu li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.Menu a {
+    color: white;
+    font-family: Myriad Pro;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 5px;
+}
+
+body {
+	font-family: Myriad Pro;
+}
+
+.main-top {
+    background: #F1F1F1;
+    padding: 40px 0px;
+}
+
+.article {
+    width: 40%;
+}
+
+.des {
+    color: #6E6E6E;
+}
+
+a.Learn {
+    background: #F99640;
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.main-image {
+    width: 60%;
+}
+
+img.main-img {
+    max-width: 100%;
+}
+
+h2.h-middle {
+    color: #2F2F2F;
+    padding: 50px 0px;
+}
+
+h3.h3-middle {
+    color: #2F2F2F;
+}
+
+.middle-item {
+    width: 33.33%;
+}
+
+p.des-middle {
+    color: #6F6F6F;
+}
+
+.middle-item {
+    width: 33.33%;
+    margin: 0 20px;
+}
+
+.rectangle {
+    height: 50px;
+    background: #2F2F2F;
+}
+
+.main-middle .row {
+    display: flex;
+    /*Dưới đây là kỹ thuật fix thẳng lề cho các cột bên trong flex*/
+    margin: 0px -20px;
+}
+
+/*psd_demo/css/style.css*/
+/*iPad/Tablet*/
+@media(min-width: 768px) and (max-width: 1023px) {
+
+}
+/*Mobile*/
+@media(max-width: 767px) {
+
+header.header {
+    background: darkred;
+}
+
+.row {
+    /*Cần bỏ cơ chế luôn giữ các cột bên trong nằm trên 1 hàng - mặc định của flex*/
+    flex-wrap: wrap;
+}
+
+.Logo, .Menu {
+    width: 100%;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.Logo {
+    text-align: center;
+}
+
+.Menu li {
+    margin: 0px 2px;
+}
+
+.Menu a {
+    font-size: 13px;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.article {
+    width: 100%;
+}
+
+.main-image {
+    width: 100%;
+}
+
+a.Learn {
+    margin-bottom: 15px;
+}
+
+}

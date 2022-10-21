@@ -1,0 +1,44 @@
+<!-- responsive.html 
+- Responsive trong thiết kế web
++ Là một kỹ thuật thiết kế web hiển thị tương thích với nhiều thiết bị
++ Hầu hết các website hiện nay chúng đều được responsive
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Phải có thẻ meta dưới đây thì trình duyệt mới nhận đúng kích thước màn hình khi responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Responsive</title>
+</head>
+<body>
+	<style type="text/css">
+		/*Mặc định code CSS là code cho PC trước*/
+		h1 {
+			color: red;
+		}
+
+        /*Code CSS iPad phía dưới PC*/
+        @media(min-width:  768px) and (max-width: 1023px) {
+        	h1 {
+        		color: blue;
+        	}
+        }
+        /*Code Mobile nằm dưới iPad*/
+        @media(max-width: 767px) {
+        	h1 {
+        		color: green;
+        	}
+        }
+        /*Thứ tự code: PC -> iPad -> Mobile*/
+
+		/*- Quy định kích thước màn hình cho 3 thiết bị phổ biển nhất:
+        + PC: min-width: 1024px;
+        + Ipad/Tablet: min-width: 768px và max-width: 1023px;
+        + Mobile: max-width: 767px;
+		*/
+	</style>
+	<h1>Thẻ h1</h1>
+
+</body>
+</html>

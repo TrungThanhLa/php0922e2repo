@@ -1,0 +1,292 @@
+<!-- BTVN_Day08_CSS_Part1.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bài tập về nhà CSS phần 1 Day08</title>
+</head>
+<body>
+	<style type="text/css">
+		#h2textred {
+			color: red;
+		}
+
+		#ex2 {
+			background-color: #008000;
+		}
+
+		#ulex2 {
+			background-color: #FF0000;
+            margin: 0px 15px 0px;
+		}
+
+		.rowEx4 {
+			display :flex;
+		}
+
+		.h2ex4 {
+			color: red;
+		}
+
+		.Ex5 {
+			color: red;
+
+		}
+
+		.Header {
+			background-color: #F4F4F4;
+            text-align: center;
+            font-family: Arial;
+            padding: 10px 0px 0px 0px;
+            margin: 0px -10px 0px -10px;
+		}
+
+		.Information {
+			background-color: white;
+			padding: 15px;
+			margin: -8px;
+			text-align: center;
+			font-family: Arial;
+		}
+
+		.h2Ex7{
+			color: red;
+		}
+
+	</style>
+	Ex1:
+	<h1>X-241 Dog Robot</h1>
+	<h2>Overview</h2>
+	<p>The X-241 is the perfect canine pal for the busy bilionaire</p>
+	<h2>Details</h2>
+	<p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet.</p>
+	<div id="h2textred">
+	<h2>Warnings</h2>
+	<ul>
+		<li>Do not immerse in water</li>
+		<li>Do not eat</li>
+		<li>Do not exist</li>
+	</ul>
+	</div>
+	<br>
+	Ex2:
+	<div id="ex2">
+	<h1>Meta examples</h1>
+	<p>Japanese example:</p>
+	<p>Below is a dynamic list. Click anywhere outside the list to add a new item. Click an existing list item to change its text to something else.</p>
+	<div id="ulex2">
+	<ul>
+		<li>This</li>
+		<li>list is</li>
+		<li>pretty</li>
+		<li>awesome</li>
+	</ul>
+</div>
+	<br>
+	</div>
+    <br>
+	Ex3:
+	<h2>PupSpa</h2>
+	<p>The #1 Dog Spa in NYC</p>
+	<img src="C:\Users\LA THANH\Documents\Lightshot\Screenshot_1.PNG">
+	<p>We are a full service grooming salon and doggy daycare. PupSpace is founded on the principles of communication and specialized care. We welcome you to your dog's new second home.</p>
+	<img src="C:\Users\LA THANH\Documents\Lightshot\Screenshot_2.PNG">
+	<p>ADDRESS:</p>
+	<p>233 Lewis Avenue,</p>
+	<p>Brooklyn, NY 11233</p>
+	<img src="C:\Users\LA THANH\Documents\Lightshot\Screenshot_3.PNG">
+	<p>HOURS:</p>
+	<p>Mon-Fri:8:00 AM - 9:00 PM</p>
+	<p>Sat-Sun 7:00 AM - 11:00 PM</p>
+	<img src="C:\Users\LA THANH\Documents\Lightshot\Screenshot_4.PNG">
+	<p>CALL US:</p>
+	<p>718-324-6751</p>
+	<p>"PupSpa" is a first class doggie grooming operation. My pug Vandyke always comes back looking so fresh. Thanks guys!</p>
+	<p>- Dan</p>
+	<p>"Lua (my shiba inu) and i are HUGE fans of PupSpa! Ryan and his crew are always so generous with their time."</p>
+	<p>- KC</p>
+	Ex4:
+	<form>
+	<br>
+	<div class="Ex4">
+		<div class="rowEx4">
+			<div class="imgex4">
+		<img src="D:\Tài liệu học lập trình\php0922e2_skda\Day07_CD3_CSS_Basic\Bai_tap_ve_nha\images\bt4.png">
+	</div>
+	<div class="h2ex4">
+		<h2>Employee Registration Form</h2>
+	</div>
+	</div>
+	</div>
+		<table border="0" cellpadding="0" cellspacing="6">
+		<tr>
+			<td></td>
+			<td><input type="radio" name="gender" > Mr
+	            <input type="radio" name="gender" > Mrs
+	            <input type="radio" name="gender" > Ms
+	        </td>
+		</tr>
+		<tr>
+			<td>First Name</td>
+			<td><input type="text" placeholder="FirstName"></td>
+		</tr>
+		<tr>
+			<td>Last Name</td>
+			<td><input type="text" placeholder="LastName"></td>
+		</tr>
+		<tr>
+			<td>Mail Address1</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td>Mail Addres2</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td>City</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td>State</td>
+			<td><select>
+		        <option>Guiarat</option>
+		        <option>etc.</option>
+	            </select></td>
+		</tr>
+		<tr>
+			<td>Zip</td>
+			<td><input type="number"></td>
+		</tr>
+		<tr>
+			<td>Upload Photo</td>
+			<td><button>Choose File</button> No file chosen</td>
+		</tr>
+		<tr>
+			<td>E-Mail</td>
+			<td><input type="E-Mail"></td>
+		</tr>
+		<tr>
+			<td>Mobile</td>
+			<td><input type="number" placeholder="+91"></td>
+		</tr>
+		<tr>
+			<td>Languages known</td>
+			<td>
+			<input type="checkbox"> Gujarati
+			<br>
+	        <input type="checkbox"> Hindi
+	        <br>
+	        <input type="checkbox"> English
+	        <br>
+	        <input type="checkbox">Marathi
+	        <br> 
+	        </td>
+		</tr>
+		<tr>
+			<td>Additional Information</td>
+			<td><textarea cols="30" rows="5" placeholder="Optional"></textarea></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" value="Submit">
+	            <input type="Reset" value="Reset">
+            </td>
+		</tr>
+		</table>
+</form>
+<br>
+ Ex5:
+ <div class="Ex5Final">
+ <h2 class="Ex5">Text Formatting Tags</h2>
+ <table border="1" cellpadding="0" cellspacing="2">
+ 	<tr>
+ 		<th>HTML Tag</th>
+ 		<th>Output</th>
+ 	</tr>
+ 	<tr>
+ 		<td>normal text</td>
+ 		<td>hello world</td>
+ 	</tr>
+ 	<tr>
+ 		<td>Font & its attribute</td>
+ 		<td>hello world</td>
+ 	</tr>
+ 	<tr>
+ 		<td>< B ></td>
+ 		<td><b>Bold</b></td>
+ 	</tr>
+ 	<tr>
+ 		<td>< I ></td>
+ 		<td><i>Italic</i></td>
+ 	</tr>
+ 	<tr>
+ 		<td>< U ></td>
+ 		<td><u>Underline</u></td>
+ 	</tr>
+ 	<tr>
+ 		<td>< EM ></td>
+ 		<td><em>Emphasis</em></td>
+ 	</tr>
+ 	<tr>
+ 		<td>< STRONG ></td>
+ 		<td><strong>STRONG</strong></td>
+ 	</tr>
+ 
+ 	</tr>
+ </table>
+</div>
+<br>
+Ex6:
+<div class="Header">
+	<h1>Learning JavaScript</h1>
+	<p>for Absolute Beginner</p>
+	<br>
+	<hr  width="100%" size="5px" align="center" color="#CBCBCB" />
+</div>
+<div class="Information">
+	<form>
+		<!-- <table border="1" cellpadding="0" cellspacing="4">
+			<tr>
+				<td>First Name</td>
+				<td><input type="Text"></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="Text"></td>
+			</tr>
+		</table>  -->
+		<p>First Name <input type="Text"></p>
+		<p>Last Name <input type="Text"></p>
+		<p>Background <select>
+			<option>Red</option>
+			<option>Black</option>
+			<option>Green</option>
+		</select>
+		</p>
+		<input type="submit" value="Submit">
+	</form>
+</div>
+<br>
+Ex7:
+<h1>HTML Practice Excercise</h1>
+<div class="h2Ex7">
+<h2><u>James Madison University</u></h2>
+</div>
+<hr width="100%" size="3px">
+<p>I love <i>HTML</i> because</p>
+<ol>
+	<li>I learned it quickly</li>
+	<li>I can make web pages using code</li>
+	<li>It is fun</li>
+</ol>
+<hr width="100%" size="3px">
+<div class="EmailEx7">
+<p>My professor's e-mail address is <u>clarketb@jmu.edu</u></p>
+</div>
+<p><b>Have a great day</b></p>
+<br>
+<hr width="100%" size="3px">
+
+</body>
+</html>

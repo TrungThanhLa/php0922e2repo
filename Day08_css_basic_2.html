@@ -21,6 +21,16 @@
 			background: blue;
 		}
 
+		/*Gộp: */
+		/*4 giá trị sẽ theo 1 vòng kim đồng hồ, lần lượt như sau: top right bottom left*/
+		/*3 giá trị:  top right - left bottom*/
+		/*VD:  margin 5px 10px 15px;*/
+		/*2 giá trị:  top-bottom left-right*/
+        /*VD:  margin 5px 10px;*/
+        /*1 giá trị:  top-bottom-left-right*/
+        /*VD:  margin 10px;*/
+
+
 		/*2 - Padding: Khoảng cách tính từ viền bao quanh */
 
 		#div-pd {
@@ -53,7 +63,7 @@
             height: 100px;
             position: fixed;
             bottom: 20px;
-            left: 800px;
+            right: 0px;
 		}
 		/*Để di chuyển, chúng ta phải dùng top-left-right-bottom*/
 
@@ -63,7 +73,7 @@
 			width: 60px;
 			height: 60px;
 			position: relative;
-            right: 8px;
+            left: 8px;
             top: 10px;
 		}
 
@@ -82,7 +92,7 @@
 			width: 50px;
 			height: 50px;
 			position: absolute;
-            right: 100px;
+            right: 0px;
             z-index: 2; 
 
 		}
@@ -103,9 +113,9 @@
 	</style>
 	<div id="div-ov">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
 
-	<!-- <div id="parent">
+	<div id="parent">
 		<div id="pos-abs">Pos Absolute</div>
-	</div> -->
+	</div>
 
 	<div id="pos-rel">Div Relative</div>
 	<div id="pos-fixed">Div Fixed</div>
